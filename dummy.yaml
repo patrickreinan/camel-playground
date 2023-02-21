@@ -1,0 +1,27 @@
+- route:
+    id: route-e3a0
+    from:
+      uri: timer:yaml
+      id: from-cd8c
+      parameters:
+        period: '1000'
+      steps:
+        - setBody:
+            id: setBody-c98a
+            expression:
+              constant:
+                expression: Hello Camel from yaml
+                id: constant-30b8
+        - log:
+            message: ${body}
+            id: log-8cb6
+        - log:
+            message: ${env:TESTVAR}
+            id: log-c98f
+        - log:
+            message: "{{dummy.prop.log.message}}"
+- restConfiguration:
+    component: platform-http
+    host: localhost
+    port: '8081'
+    bindingMode: auto
