@@ -11,25 +11,57 @@
       parameters:
         period: '1000'
       steps:
-        - setBody:
-            id: setBody-c98a
+        - setProperty:
+            name: defaultvalue
+            id: setProperty-5f15
             expression:
-              constant:
-                expression: Hello Camel from yaml
-                id: constant-30b8
-        - log:
-            message: ${body}
-            id: log-body
+              simple:
+                expression: Default value for integration
+                id: simple-ce05
+        - setBody:
+            id: setBody-9305
+            expression:
+              simple:
+                expression: ${exchangeProperty.defaultvalue}
+                id: simple-cb37
         - to:
             uri: class:com.patrickreinan.ValidationClass
+            id: to-01a5
             parameters:
-              method: Validate
+              method: validate
+              lazyStartProducer: false
+              scope: Request
+            description: Validate
+        - setProperty:
+            name: validationstatus
+            id: setProperty-validationstatus
+            expression:
+              simple:
+                expression: ${body}
+                id: simple-validationstatus
+        - setBody:
+            id: setBody-cdec
+            expression:
+              simple:
+                expression: ${exchangeProperty.defaultvalue}
+                id: simple-4f9e
+
+        - to:
+            uri: class:com.patrickreinan.TransformationClass
+            id: to-e2c3
+            parameters:
+              method: transform
+            description: Transform
+        - marshal:
+            id: marshal-bb6e
+            json:
+              id: json-fa50
+              library: jackson
         - log:
-            message: Validation is ${body}
-            id: log-validate
+            message: Body validation status is ${exchangeProperty.validationstatus} and transformation was from ${exchangeProperty.defaultvalue} to ${body}
+            id: log-transformation
         - log:
-            message: ${env:TESTVAR}
-            id: log-env-testvar
-        - log:
-            message: '{{dummy.prop.log.message}}'
-            id: log-prop
+            message: >-
+              ENVIROMENT TESTVAR=${env:TESTVAR}, PROPERTY
+              DUMMY_PROP_LOG_MESSAGE={{dummy.prop.log.message}}
+            id: log-vars

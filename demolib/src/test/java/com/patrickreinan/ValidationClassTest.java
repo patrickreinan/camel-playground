@@ -17,7 +17,7 @@ public class ValidationClassTest {
     public void shouldBeFalse(){
         String value = null;
 
-        boolean result = validation.Validate(value);
+        boolean result = validation.validate(value);
 
         assertFalse(result);
     }
@@ -25,7 +25,7 @@ public class ValidationClassTest {
     @Test
     public void shouldBeTrue(){
         String value = "is a valid value";
-        boolean result = validation.Validate(value);
+        boolean result = validation.validate(value);
         assertTrue(result);
     }
 

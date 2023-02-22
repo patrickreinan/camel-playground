@@ -1,6 +1,13 @@
-EXPORT_DIR=$(realpath .)/exported
+BASE_DIR=$(realpath .)
+EXPORT_DIR=$BASE_DIR/exported
 SRC_DIR=$EXPORT_DIR/src
+DEMOLIB_DIR=$BASE_DIR/demolib
 
+
+cd $DEMOLIB_DIR
+mvn install
+
+cd $BASE_DIR
 rm -rf $EXPORT_DIR 
 
 mkdir $EXPORT_DIR
@@ -9,6 +16,9 @@ cp application.properties $EXPORT_DIR
 cp dummy.yaml $EXPORT_DIR
 
 cd $EXPORT_DIR
+
+
+
 
 camel export \
         --runtime=spring-boot \

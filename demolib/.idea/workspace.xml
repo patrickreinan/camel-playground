@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72718011-2af6-48bc-9ac0-706acb52519f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/patrickreinan/ValidationClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/patrickreinan/ValidationClassTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/patrickreinan/TransformationClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/patrickreinan/TransformationResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/patrickreinan/TransformationClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/patrickreinan/ValidationClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/patrickreinan/ValidationClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/patrickreinan/ValidationClassTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/patrickreinan/ValidationClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/demolib-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/demolib-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.patrickreinan.ValidationClassTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.patrickreinan.ValidationClassTest.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +42,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2M4c4kZgS0DmBnsiipgj5YkV86d" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -45,7 +55,22 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.TransformationClassTest">
+    <configuration name="TransformationClassTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demolib" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.patrickreinan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.patrickreinan" />
+      <option name="MAIN_CLASS_NAME" value="com.patrickreinan.TransformationClassTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ValidationClassTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="demolib" />
       <extension name="coverage">
@@ -63,6 +88,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TransformationClassTest" />
         <item itemvalue="JUnit.ValidationClassTest" />
       </list>
     </recent_temporary>
