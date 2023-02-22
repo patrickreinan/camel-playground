@@ -1,12 +1,12 @@
-EXPORT_DIR=./exported
+EXPORT_DIR=$(realpath .)/exported
 SRC_DIR=$EXPORT_DIR/src
 
 rm -rf $EXPORT_DIR 
 
 mkdir $EXPORT_DIR
 
-cp application.properties ./$EXPORT_DIR
-cp dummy.yaml ./$EXPORT_DIR
+cp application.properties $EXPORT_DIR
+cp dummy.yaml $EXPORT_DIR
 
 cd $EXPORT_DIR
 
@@ -14,7 +14,7 @@ camel export \
         --runtime=spring-boot \
         --gav=com.patrickreinan:dummy:1.0.0 \
         --fresh \
-        --directory=$SRC_DIR 
+        --directory=$SRC_DIR
         
 cd $SRC_DIR
 mvn install

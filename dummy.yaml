@@ -1,8 +1,13 @@
+- restConfiguration:
+    component: platform-http
+    host: localhost
+    port: '8081'
+    bindingMode: auto
 - route:
-    id: route-e3a0
+    id: route-timer
     from:
       uri: timer:yaml
-      id: from-cd8c
+      id: from-timer
       parameters:
         period: '1000'
       steps:
@@ -14,14 +19,17 @@
                 id: constant-30b8
         - log:
             message: ${body}
-            id: log-8cb6
+            id: log-body
+        - to:
+            uri: class:com.patrickreinan.ValidationClass
+            parameters:
+              method: Validate
+        - log:
+            message: Validation is ${body}
+            id: log-validate
         - log:
             message: ${env:TESTVAR}
-            id: log-c98f
+            id: log-env-testvar
         - log:
-            message: "{{dummy.prop.log.message}}"
-- restConfiguration:
-    component: platform-http
-    host: localhost
-    port: '8081'
-    bindingMode: auto
+            message: '{{dummy.prop.log.message}}'
+            id: log-prop
